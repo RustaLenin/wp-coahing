@@ -1,0 +1,67 @@
+/*
+Theme Name: Coahing
+Text Domain: coahing
+Version: 1.0
+Requires at least: 5.0
+Requires PHP: 7.2
+Description: Simple WordPress theme for coaching
+Tags: blog
+Author: the WordPress team
+Author URI:
+Theme URI:
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+
+@import "css/modal.css";
+@import "css/buttons.css";
+@import "css/form.css";
+@import "css/header.css";
+
+* {
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body.black {
+    background-color: black;
+    color: white;
+}
+
+body.white {
+    background-color: white;
+    color: black;
+}
+
+.svg_icon {
+    fill: #444;
+    width: 16px;
+    height: 16px;
+    opacity: 0.7;
+}
+
+.svg_icon:hover {
+    opacity: 1;
+    fill: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form .input_container {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form .input_container .input_title {
+    position: absolute;
+    background-color: #ffffff;
+    top: -8px;
+    left: 24px;
+    padding: 0 2px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.form input {
+    padding: 12px 24px;
+    width: 270px;
+    border-radius: 4px;
+    border-color: #444444;
+    font-size: 18px;
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.form input:focus {
+    border-color: #5e9cff;
+    box-shadow: 2px 2px 8px 2px #5e9cff;
+}
