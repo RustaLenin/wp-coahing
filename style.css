@@ -24,6 +24,7 @@ with others.
 @import "css/buttons.css";
 @import "css/form.css";
 @import "css/header.css";
+@import "css/post.css";
 
 * {
     box-sizing: border-box;
