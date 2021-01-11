@@ -8,19 +8,13 @@
                 <a href="">Coaching Git</a>
             </div>
 
-            <nav class="header_navigation">
-                <span class="navigation_item"><a href="">О нас</a></span>
-                <span class="navigation_item"><a href="">Рубрики</a>
-                        <div class="dropdown_nav_menu">
-                            <span class="dropdown_nav_menu_item"><a href="/news">Новости</a></span>
-                            <span class="dropdown_nav_menu_item"><a href="/articles">Статьи</a></span>
-                            <span class="dropdown_nav_menu_item"><a href="/video">Видео</a></span>
-                            <span class="dropdown_nav_menu_item"><a href="/mems">Мемы</a></span>
-                        </div>
-                    </span>
-                <span class="navigation_item"><a href="">Авторы</a></span>
-                <span class="navigation_item"><a href="">Контакты</a></span>
-            </nav>
+            <?php wp_nav_menu( [
+                'theme_location' => 'header_menu',
+                'container' => 'nav',
+                'container_class' => 'header_navigation',
+                'items_wrap' => '<ul class="header_menu_container">%3$s</ul>'
+            ]); ?>
+
         </div>
 
         <div class="header_controls">
