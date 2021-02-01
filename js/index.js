@@ -19,6 +19,18 @@ function close_modal( elem ) {
 
 function submitModal(elem) {
     let form = elem.closest('.modal').querySelector('.form');
+    return collectData( form );
+}
+
+function singUp(elem) {
+    let form = elem.closest('.modal').querySelector('.form');
     let data = collectData( form );
+    data['action'] = 'registration';
     console.log(data);
+    fetch( rpcurl, {
+        method: 'POST',
+        'Content-Type': 'application/json;charset=utf-8',
+        body: JSON.stringify(data)
+    }).then(response => console.log(response.json()));
+
 }

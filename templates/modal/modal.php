@@ -20,31 +20,33 @@
 
             <div class="form">
 
-                <label class="input_container" onclick="inputConFocus(this);">
-                    <span class="input_title">ФИО</span>
-                    <input type="text" name="full_name" placeholder="Иванов Иван Иванович" >
+                <label class="input_container">
+                    <span class="input_title">Имя</span>
+                    <input type="text" name="first_name" placeholder="Иван" >
                 </label>
 
                 <label class="input_container">
-                    <span class="input_title">Пароль</span>
-                    <input type="password" name="password" placeholder="йцукен">
+                    <span class="input_title">Фамилия</span>
+                    <input type="text" name="last_name" placeholder="Иванов" >
                 </label>
 
                 <label class="input_container">
-                    <span class="input_title">Дата рождения</span>
-                    <input type="date" name="birthday" placeholder="01.01.2000">
+                    <span class="input_title">Email</span>
+                    <input type="text" name="email" placeholder="dude@gmail.com" >
                 </label>
 
                 <label class="input_container">
-                    <span class="input_title">Промокод</span>
-                    <input name="promocode" type="number" placeholder="123987">
+                    <span class="input_title">Телефон</span>
+                    <input type="text" name="phone" placeholder="+79219500500" >
                 </label>
+
+
             </div>
 
         </div>
 
         <div class="modal_footer">
-            <button class="button action_button" onclick="submitModal(this)">Отправить</button>
+            <button class="button action_button" onclick="singUp(this)">Отправить</button>
         </div>
 
     </div>
