@@ -7,3 +7,4 @@ add_theme_support( 'html5' );
 
 include 'functions/navigation.php';
 include 'backend/user/registration.php';
+include 'backend/posts/similar.php';

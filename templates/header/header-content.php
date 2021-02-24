@@ -5,7 +5,7 @@
     <div class="wrapper">
         <div class="header_left">
             <div class="logo_container">
-                <a href="">Coaching Git</a>
+                <a href="<?php echo site_url(); ?>">WP Coaching</a>
             </div>
 
             <?php wp_nav_menu( [

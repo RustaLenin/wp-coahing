@@ -6,5 +6,9 @@
     window.rpcurl  = '<?php echo site_url() . '/api/json-rpc.php'; ?>';
     /* ]]> */
 </script>
+<?php if ( is_single() ) { ?>
+    <script src="https://yastatic.net/share2/share.js"></script>
+<?php } ?>
+
 </body>
 </html>
