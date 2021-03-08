@@ -11,6 +11,7 @@
     width: 100%;
     background: #ffffff;
     margin-top: 16px;
+    margin-bottom: 16px;
 }
 
 .single_post__header {
@@ -29,6 +30,10 @@
   object-fit: contain;
 }
 
+.single_post__title {
+    font-size: 32px;
+}
+
 .single_post__meta {
     padding: 0 16px;
 }
@@ -44,6 +49,7 @@
 
 .single_post__footer {
     padding: 16px;
+    border-bottom: 1px solid #666666;
 }
 
 .single_post__footer .share_container {
@@ -55,4 +61,66 @@
 
 .single_post__footer .share_container .ya-share2 {
     margin-left: 12px;
+}
+
+/** Comments Block **/
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    width: 100%;
+}
+
+.comments_head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comments_head__title {
+    display: flex;
+    align-items: baseline;
+}
+
+.comments h2 {
+    font-size: 24px;
+    padding: 0;
+    margin: 0 8px 0 0;
+}
+
+.comments_count {
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.comments_list {
+    padding: 16px;
+}
+
+.comment_container {
+
+}
+
+.comment_container .comment_meta {
+    display: flex;
+    align-items: baseline;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.comment_container .comment_meta div {
+    margin-right: 8px;
+}
+
+.comment_container .comment_meta .avatar {
+    margin-bottom: -6px;
+}
+
+.comments_form_container {
+    padding: 16px;
+}
+
+.similar_posts {
+    margin-bottom: 16px;
 }

@@ -48,6 +48,8 @@ $thumbnail_id =  get_post_thumbnail_id($post->ID);
 
         </div>
 
+        <?php comments_template(); ?>
+
     </article>
 
     <div class="similar_posts">

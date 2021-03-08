@@ -33,3 +33,11 @@
     border-color: #5e9cff;
     box-shadow: 2px 2px 8px 2px #5e9cff;
 }
+
+.form textarea {
+    padding: 16px;
+}
+
+.form textarea.full_width {
+    width: 100%;
+}

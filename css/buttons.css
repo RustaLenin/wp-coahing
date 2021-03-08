@@ -10,9 +10,10 @@
     transition: 0.3s;
     border-radius: 6px;
     box-shadow: 2px 2px 8px #555;
+    width: fit-content;
 }
 
-.action_button {
+.button.action_button {
     background: orange;
     border: none;
 }
@@ -23,4 +24,14 @@
 
 .button:active {
     box-shadow: -2px -2px 8px #555;
+}
+
+.button a {
+    color: white;
+    text-decoration: none;
+}
+
+.button.in_content {
+    background-color: #333333;
+    border: none;
 }
