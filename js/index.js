@@ -26,11 +26,29 @@ function singUp(elem) {
     let form = elem.closest('.modal').querySelector('.form');
     let data = collectData( form );
     data['action'] = 'registration';
-    console.log(data);
     fetch( rpcurl, {
         method: 'POST',
         'Content-Type': 'application/json;charset=utf-8',
         body: JSON.stringify(data)
     }).then(response => console.log(response.json()));
 
+}
+
+function setLocale( locale ) {
+    let data = {
+        'action': 'translate',
+        'locale': locale
+    };
+    fetch( rpcurl, {
+        method: 'POST',
+        'Content-Type': 'application/json;charset=utf-8',
+        body: JSON.stringify(data)
+    }).then( response => {
+        return response.json();
+    }).then( json => {
+        console.log(json);
+        if (json.result === 'success' ) {
+            location.reload();
+        }
+    });
 }
