@@ -12,6 +12,7 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/form.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/test.js"></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/js/comments.js"></script>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">
 
     <?php wp_head(); ?>

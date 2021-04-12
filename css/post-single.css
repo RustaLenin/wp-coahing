@@ -65,6 +65,11 @@
 
 /** Comments Block **/
 
+.info_block {
+    margin-bottom: 24px;
+    color: gray;
+}
+
 .comments {
     display: flex;
     flex-direction: column;
