@@ -13,6 +13,10 @@ include 'backend/translate/translate.php';
 Theme_Translate::default_locale();
 Theme_Translate::set_translate();
 
+function is_site_admin(){
+    return in_array('administrator',  wp_get_current_user()->roles);
+}
+
 function _t( $key ) {
     if ( wp_translate[$key] ) {
         return wp_translate[$key];

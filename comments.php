@@ -57,7 +57,7 @@ $comments_count = count($comments);
                     <textarea class="full_width" type="text" rows="5" cols="60" name="comment_content" placeholder="Очень интересная запись, но..." ></textarea>
                 </label>
 
-                <span class="button action_button" onclick="sendComment(this);"> Отправить комментарий</span>
+                <span class="button action_button" onclick="comment.send(this);"> Отправить комментарий</span>
 
             </div>
 
