@@ -7,7 +7,9 @@ Class Post_Comments {
         $answer = [
             'result' => 'success',
             'message' => 'Comment added',
-            'received_data' => $data
+            'dump' => [
+                'received_data' => $data
+            ]
         ];
 
         if ( !$data['post_id'] ) {
@@ -30,6 +32,15 @@ Class Post_Comments {
                     $answer['result'] = 'error';
                     $answer['message'] = 'Failed to add comment';
                     $answer['dump'] = $result;
+
+                } else {
+
+                    $comment = get_comment($result);
+                    $answer['dump']['comment'] = $comment;
+                    ob_start();
+                    include get_template_directory() . '/templates/comments/comment.php';
+                    $html = ob_get_clean();
+                    $answer['html'] = $html;
 
                 }
             }

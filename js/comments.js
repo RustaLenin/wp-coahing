@@ -26,7 +26,8 @@ class Comment {
         }).then( json => {
             console.log(json);
             if ( json.result === 'success' ) {
-
+                let comments_list = elem.closest('.comments').querySelector('.comments_list');
+                comments_list.insertAdjacentHTML('afterbegin', json.html );
             }
         });
     }
