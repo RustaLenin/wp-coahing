@@ -52,6 +52,16 @@ class Comment {
         });
     }
 
+    edit( elem ) {
+        let comment_cont = elem.closest('.comment_container');
+        let comment_id = comment_cont.getAttribute('data-comment_id');
+        let comment_content = comment_cont.querySelector('.comment_content');
+        let previous_content = comment_content.textContent;
+        comment_content.setAttribute('prevcontent', previous_content );
+        comment_content.setAttribute('contenteditable', 'true' );
+        comment_content.focus();
+    }
+
 }
 
 let comment = new Comment();

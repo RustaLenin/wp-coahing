@@ -118,6 +118,30 @@
     margin-right: 8px;
 }
 
+.comment_container .comment_controls {
+    display: flex;
+    align-items: baseline;
+}
+
+.comment_container .comment_controls svg {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.comment_container .comment_content {
+
+}
+
+.comment_container .comment_content[contenteditable=true] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    outline: 0 solid transparent;
+}
+
+.comment_container .comment_content[contenteditable=true]:focus {
+    border: 1px solid #3535e9;
+}
+
 .comment_container .comment_meta .avatar {
     margin-bottom: -6px;
 }
