@@ -28,7 +28,7 @@ with others.
 
 * {
     box-sizing: border-box;
-    transition: 0.3s;
+    /*transition: 0.3s;*/
 }
 
 body {
@@ -52,11 +52,20 @@ body.white {
     width: 16px;
     height: 16px;
     opacity: 0.7;
+    transition: 0.3s;
 }
 
 .svg_icon:hover {
     opacity: 1;
     fill: #000;
+}
+
+.svg_icon.cancel:hover {
+    fill: #ff3d3d;
+}
+
+.svg_icon.approve:hover {
+    fill: #00a32a;
 }
 
 .bold {

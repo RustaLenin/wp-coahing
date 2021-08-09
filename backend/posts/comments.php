@@ -83,6 +83,39 @@ Class Post_Comments {
         return $answer;
     }
 
+    public static function update( $data ) {
+
+        $answer = [
+            'result' => 'success',
+            'message' => 'Comment successfully updated',
+            'received_data' => $data,
+        ];
+
+        if ( !( $data['comment_id'] && $data['comment_content'] ) ) {
+            $answer['result'] = 'error';
+            $answer['message'] = 'Not enough data received';
+        } else {
+            $comment = get_comment( $data['comment_id'] );
+            if ( !$comment ) {
+                $answer['result'] = 'error';
+                $answer['message'] = 'Such comment not found';
+            } else {
+                $clear_content = esc_html( esc_sql($data['comment_content'] ) );
+                $update_status = wp_update_comment( [
+                    'comment_ID' => $data['comment_id'],
+                    'comment_content' => $clear_content
+                    ], true );
+                if ( is_wp_error($update_status) ) {
+                    $answer['result'] = 'error';
+                    $answer['message'] = 'Failed to update comment';
+                }
+            }
+        }
+
+        $answer['source'][] = __METHOD__;
+        return $answer;
+    }
+
     public static function ajax_handler() {
 
         $answer = [

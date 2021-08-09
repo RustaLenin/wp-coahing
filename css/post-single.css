@@ -104,7 +104,7 @@
 }
 
 .comment_container {
-
+    position: relative;
 }
 
 .comment_container .comment_meta {
@@ -144,6 +144,15 @@
 
 .comment_container .comment_meta .avatar {
     margin-bottom: -6px;
+}
+
+.comment_container .edit_controls{
+    display: flex;
+    position: absolute;
+    top:100%;
+    right: 0;
+    width: fit-content;
+    padding: 4px;
 }
 
 .comments_form_container {
