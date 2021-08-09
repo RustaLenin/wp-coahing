@@ -100,7 +100,7 @@ Class Post_Comments {
                 $answer['result'] = 'error';
                 $answer['message'] = 'Such comment not found';
             } else {
-                $clear_content = esc_html( esc_sql($data['comment_content'] ) );
+                $clear_content =  esc_sql( sanitize_text_field($data['comment_content'] ) );
                 $update_status = wp_update_comment( [
                     'comment_ID' => $data['comment_id'],
                     'comment_content' => $clear_content
